@@ -1,0 +1,18 @@
+{
+  "name": "Nice to meet you!",
+  "homepage": "hi.juanma.xyz",
+  "authors": [
+    "Juanma Pérez Rabasco <hello@juanma.xyz>"
+  ],
+  "description": "Nice to meet you!",
+  "main": "",
+  "license": "GNU GENERAL PUBLIC LICENSE v3.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "_bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

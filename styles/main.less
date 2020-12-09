@@ -1,0 +1,422 @@
+// compress: true, out: ../style.css
+
+@import url('base.less');
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////// THIS IS THE BEGINNING
+
+html {
+  background-color: @dark;
+  height: 100%;
+
+  body {
+    color: @light;
+    background-color: @dark;
+    font-family: @sans-serif;
+    height: 100%;
+    text-align: center;
+
+    a {
+      .transition;
+      color: @light;
+
+      &:focus,
+      &:hover {
+        color: @light;
+        outline: 0 auto -webkit-focus-ring-color;
+        outline-offset: 0;
+      }
+    }
+
+    .site-wrapper {
+      display: table;
+      height: 100%; width: 100%;
+      min-height: 100%;
+
+      .site-wrapper-inner {
+        display: table-cell;
+        vertical-align: top;
+
+        .cover-container {
+          margin-right: auto; margin-left: auto;
+
+          .masthead {
+
+            .masthead-brand {
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+
+            nav {
+
+              .masthead-nav {
+
+                li {
+                  display: inline-block;
+
+                  &.active {
+
+                    a {
+                      color: @light;
+                      border-bottom-color: @light;
+
+                      &:focus,
+                      &:hover {
+                        color: @light;
+                        border-bottom-color: @light;
+                      }
+                    }
+                  }
+
+                  &:first-child {
+
+                    a {
+                      border-bottom: 0;
+                    }
+                  }
+
+                  a {
+                    border-bottom: 2px solid transparent;
+                    color: fade(@light, 75%);
+                    font-size: 16px;
+                    padding-left: 0; padding-right: 0;
+
+                    &:focus,
+                    &:hover {
+                      background-color: transparent;
+                      border-bottom-color: fade(@light, 75%);
+                    }
+                  }
+                }
+
+                li + li {
+                  margin-left: 20px;
+                }
+              }
+            }
+          }
+
+          .cover {
+            .hide;
+            padding: 2% 20px;
+
+            &#cover {
+              .show;
+
+              .lead {
+                padding-right: 15px; padding-left: 15px;
+                text-align: center;
+              }
+            }
+
+            &#work {
+
+              p {
+
+                a {
+                  text-decoration: underline;
+
+                  &:focus,
+                  &:hover {
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+
+            p {
+              text-align: left;
+              padding-right: 15px; padding-left: 15px;
+            }
+
+            .lead {
+              padding-right: 0; padding-left: 0;
+              text-align: left;
+
+              .btn-lg {
+                font-family: @serif; .normal; .italic;
+                margin: 20px 0;
+                padding: 10px 20px;
+              }
+            }
+
+            .modal {
+              padding: 0 !important;
+              text-align: center;
+
+              &:before {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                margin-right: -4px;
+                vertical-align: middle;
+              }
+
+              .modal-dialog {
+                display: inline-block;
+                max-width: 1024px;
+                text-align: left;
+                vertical-align: middle;
+                width: 80%;
+
+                .modal-content {
+                  background-color: transparent;
+                  border: 0;
+                  border-radius: 0;
+                  box-shadow: none;
+                  padding: 0;
+
+                  .modal-header {
+                    border-bottom: 0;
+                    padding: 0 15px;
+                    padding-top: 0; padding-bottom: 0;
+                    text-align: left;
+
+                    h3 {
+                      margin-bottom: 0;
+                    }
+
+                    .close {
+                      color: @light;
+                      font-size: 25px;
+                      margin-top: 15px;
+
+                      span {
+                        color: @light;
+                      }
+                    }
+                  }
+
+                  .modal-body {
+                    padding: 0;
+
+                    img {
+                      height: auto; width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+
+            .page-header {
+              border-bottom: 0;
+              margin-bottom: 0;
+              padding-right: 15px; padding-left: 15px;
+              text-align: left;
+
+              h3 {
+
+                a {
+
+                  &:focus,
+                  &:hover {
+                    text-decoration: none;
+
+                    small {
+                      .transition;
+                      color: White;
+                    }
+                  }
+                }
+              }
+            }
+
+            .thumbnail {
+              background-color: transparent;
+              border: 0;
+              border-radius: 0;
+              margin-bottom: 10px;
+              padding: 0;
+
+              img {
+                height: auto; width: 100%;
+              }
+            }
+          }
+
+          .mastfoot {
+            width: 100%;
+
+            address {
+              color: fade(@light, 75%);
+
+              a {
+                color: fade(@light, 75%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btn,
+    .btn-default {
+
+      &:active:focus,
+      &:active:hover,
+      &:focus {
+        background-color: @light;
+        border: 1px solid @light;
+        color: @dark;
+        outline: 0 auto -webkit-focus-ring-color;
+        outline-offset: 0;
+      }
+    }
+
+    .btn-default {
+      background-color: @light;
+      border: 1px solid @light;
+      color: @dark;
+
+      &:active {
+        background-color: @light;
+        color: @dark;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: @light;
+        border: 1px solid @light;
+        color: @dark;
+        transition: none;
+      }
+    }
+
+    .inner {
+      padding: 30px;
+    }
+  }
+}
+
+::selection {
+  background: Lavender;
+}
+::-moz-selection {
+  background: Lavender;
+}
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px) {
+
+  html {
+
+    body {
+
+      &[data-section="cover"] {
+
+        .site-wrapper {
+
+          .site-wrapper-inner {
+            vertical-align: middle;
+
+            .cover-container {
+
+              .masthead {
+                position: fixed;
+                top: 0;
+
+                .masthead-brand {
+                  float: left;
+                }
+
+                .masthead-nav {
+                  float: right;
+                }
+              }
+
+              .cover {
+
+                .lead {
+                  margin: 0 auto;
+                  width: 70%;
+                }
+              }
+
+              .mastfoot {
+                bottom: 0;
+                position: fixed;
+              }
+            }
+          }
+        }
+      }
+
+      .site-wrapper {
+
+        .site-wrapper-inner {
+
+          .cover-container {
+            width: 100%;
+
+            .masthead {
+              width: 100%;
+
+              .masthead-brand {
+                float: left;
+              }
+
+              .masthead-nav {
+                float: right;
+              }
+            }
+
+            .cover {
+              padding: 8% 20px;
+
+              .page-header {
+                text-align: left;
+              }
+            }
+
+            .mastfoot {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+@media (min-width: 992px) {
+
+  html {
+
+    body {
+
+      .site-wrapper {
+
+        .site-wrapper-inner {
+
+          .cover-container {
+            width: 992px;
+
+            .masthead {
+              width: 992px;
+            }
+
+            .mastfoot {
+              width: 992px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////// THIS IS THE END
