@@ -72,30 +72,30 @@
 
               <p class="lead">The following is a series of snapshots taken from client web apps built upon <span class="serif">WordPress</span>. As I work more and more with <span class="serif">WordPress</span>, I’ve come to rely on <span class="serif">WordPress</span> as a Web Application Framework rather than as ready-to-go blogging platform.</p>
 
-              <div class="row" id="001" include-HTML="works/001.html"></div>
-              <div class="row" id="002" include-HTML="works/002.html"></div>
-              <div class="row" id="003" include-HTML="works/003.html"></div>
-              <div class="row" id="004" include-HTML="works/004.html"></div>
-              <div class="row" id="005" include-HTML="works/005.html"></div>
-              <div class="row" id="006" include-HTML="works/006.html"></div>
-              <div class="row" id="007" include-HTML="works/007.html"></div>
-              <div class="row" id="008" include-HTML="works/008.html"></div>
-              <div class="row" id="009" include-HTML="works/009.html"></div>
-              <div class="row" id="010" include-HTML="works/010.html"></div>
-              <div class="row" id="011" include-HTML="works/011.html"></div>
-              <div class="row" id="012" include-HTML="works/012.html"></div>
-              <div class="row" id="013" include-HTML="works/013.html"></div>
-              <div class="row" id="014" include-HTML="works/014.html"></div>
-              <div class="row" id="015" include-HTML="works/015.html"></div>
-              <div class="row" id="016" include-HTML="works/016.html"></div>
-              <div class="row" id="017" include-HTML="works/017.html"></div>
-              <div class="row" id="018" include-HTML="works/018.html"></div>
-              <div class="row" id="019" include-HTML="works/019.html"></div>
+              <div class="row" id="001" w3-include-html="works/001.html"></div>
+              <div class="row" id="002" w3-include-html="works/002.html"></div>
+              <div class="row" id="003" w3-include-html="works/003.html"></div>
+              <div class="row" id="004" w3-include-html="works/004.html"></div>
+              <div class="row" id="005" w3-include-html="works/005.html"></div>
+              <div class="row" id="006" w3-include-html="works/006.html"></div>
+              <div class="row" id="007" w3-include-html="works/007.html"></div>
+              <div class="row" id="008" w3-include-html="works/008.html"></div>
+              <div class="row" id="009" w3-include-html="works/009.html"></div>
+              <div class="row" id="010" w3-include-html="works/010.html"></div>
+              <div class="row" id="011" w3-include-html="works/011.html"></div>
+              <div class="row" id="012" w3-include-html="works/012.html"></div>
+              <div class="row" id="013" w3-include-html="works/013.html"></div>
+              <div class="row" id="014" w3-include-html="works/014.html"></div>
+              <div class="row" id="015" w3-include-html="works/015.html"></div>
+              <div class="row" id="016" w3-include-html="works/016.html"></div>
+              <div class="row" id="017" w3-include-html="works/017.html"></div>
+              <div class="row" id="018" w3-include-html="works/018.html"></div>
+              <div class="row" id="019" w3-include-html="works/019.html"></div>
 
               <p class="lead" style="padding-top: 6em;">The following is a series of snapshots taken from personal web apps built upon <span class="monospace">Jekyll</span>, which is a simple static site generator written in Ruby that I've been loving lately.</p>
 
-              <div class="row" id="020" include-HTML="works/020.html"></div>
-              <div class="row" id="021" include-HTML="works/021.html"></div>
+              <div class="row" id="020" w3-include-html="works/020.html"></div>
+              <div class="row" id="021" w3-include-html="works/021.html"></div>
 
             </div>
           </div>
@@ -121,35 +121,5 @@
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/ie10-viewport-bug-workaround.js"></script>
     <script src="scripts/main.js"></script>
-    <script>
-    (function () {
-
-      myHTMLInclude();
-
-      function myHTMLInclude() {
-        var z, i, a, file, xhttp;
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-          if (z[i].getAttribute("include-html")) {
-            a = z[i].cloneNode(false);
-            file = z[i].getAttribute("include-html");
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (xhttp.readyState == 4 && xhttp.status == 200) {
-                a.removeAttribute("include-html");
-                a.innerHTML = xhttp.responseText;
-                z[i].parentNode.replaceChild(a, z[i]);
-                myHTMLInclude();
-              }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            return;
-          }
-        }
-      }
-
-    })();
-    </script>
   </body>
 </html>
